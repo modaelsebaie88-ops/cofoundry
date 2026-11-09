@@ -7,6 +7,7 @@ import { connectionStateFor, FOUNDER_CARD_SELECT, getConnectionMap, getSavedSet,
 import { getRecommendations } from "@/lib/queries/recommendations"
 import { FounderCard } from "@/components/network/founder-card"
 import { MatchCard } from "@/components/network/match-card"
+import { LinkPendingIcon } from "@/components/shared/link-pending-icon"
 import { EmptyState, PageHeader } from "@/components/shared/page-header"
 import { DirectoryFilters } from "./filters"
 import { RecommendationControls } from "./recommendation-controls"
@@ -45,7 +46,10 @@ export default async function DiscoverPage({ searchParams }: { searchParams: Pro
             tab === t.key ? "border-primary text-primary" : "border-transparent text-muted-foreground hover:text-foreground"
           )}
         >
-          <t.icon className="size-4" /> {t.label}
+          <LinkPendingIcon>
+            <t.icon className="size-4" />
+          </LinkPendingIcon>{" "}
+          {t.label}
         </Link>
       ))}
     </div>
