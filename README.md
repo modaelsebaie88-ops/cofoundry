@@ -47,7 +47,7 @@ New sign-ups go through real email verification. Open Mailpit to click the link.
 | `SUPABASE_SERVICE_ROLE_KEY` | **Server only.** Used solely for account deletion and the demo seed script |
 | `NEXT_PUBLIC_SITE_URL` | Base URL used in auth emails |
 | `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED` | `true` to show "Continue with Google" (also enable the provider in Supabase) |
-| `AI_API_KEY` (or `GEMINI_API_KEY`), `AI_MODEL`, `AI_BASE_URL` | AI assistant. Defaults to **Google Gemini** (`gemini-2.5-flash` via Gemini's OpenAI-compatible endpoint); any OpenAI-compatible provider works by changing the base URL and model. If no key is set, the assistant clearly reports that it's not configured |
+| `AI_API_KEY` (or `GEMINI_API_KEY`), `AI_MODEL`, `AI_BASE_URL` | AI assistant. Defaults to **Google Gemini** (`gemini-3.8-flash` via Gemini's OpenAI-compatible endpoint); any OpenAI-compatible provider works by changing the base URL and model. If no key is set, the assistant clearly reports that it's not configured |
 
 **Google sign-in:** create OAuth credentials in Google Cloud and add the redirect URI `<SUPABASE_URL>/auth/v1/callback`. Then enable the provider (`supabase/config.toml` → `[auth.external.google]` locally, or the Supabase dashboard in production) and set `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED=true`.
 

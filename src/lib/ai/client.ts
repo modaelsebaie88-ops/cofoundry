@@ -12,7 +12,7 @@ const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai
 export function aiConfig() {
   const apiKey = process.env.AI_API_KEY?.trim() || process.env.GEMINI_API_KEY?.trim()
   const baseUrl = (process.env.AI_BASE_URL?.trim() || GEMINI_BASE_URL).replace(/\/+$/, "")
-  const model = process.env.AI_MODEL?.trim() || (baseUrl === GEMINI_BASE_URL ? "gemini-2.5-flash" : "")
+  const model = process.env.AI_MODEL?.trim() || (baseUrl === GEMINI_BASE_URL ? "gemini-3.8-flash" : "")
   return { apiKey, baseUrl, model, enabled: Boolean(apiKey && model) }
 }
 
